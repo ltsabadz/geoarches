@@ -26,6 +26,7 @@ parser.add_argument(
     default="data/outputs/deterministic/archesweather",
     help="where to store outputs",
 )
+parser.add_argument("--input-path", default="data/era5_240/full/", help="where to load inputs from")
 parser.add_argument("--debug", action="store_true", help="whether to debug")
 parser.add_argument("--max-lead-time", type=int, default=10, help="max lead time")
 parser.add_argument(
@@ -62,7 +63,7 @@ else:
 # create dataset and dataloader
 ds = instantiate(
     cfg.dataloader.dataset,
-    path="data/era5_240/full/",
+    path=args.input_path,
     domain="all",
 )
 
