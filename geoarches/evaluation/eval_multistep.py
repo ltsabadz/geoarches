@@ -133,7 +133,7 @@ def main():
     args = parser.parse_args()
 
     torch.set_grad_enabled(False)
-    device = "cuda" if torch.cuda.is_available() else "cpu"
+    device = "cpu" #"cuda" if torch.cuda.is_available() else "cpu"
 
     # Output directory to save evaluation.
     output_dir = args.output_dir
