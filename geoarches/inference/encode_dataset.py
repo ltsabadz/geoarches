@@ -73,7 +73,7 @@ def collate_fn(lst):
 
 
 dl = torch.utils.data.DataLoader(
-    ds, batch_size=1, num_workers=3, shuffle=False, collate_fn=collate_fn
+    ds, batch_size=8, num_workers=24, shuffle=False, collate_fn=collate_fn
 )
 
 current_year = 1979
